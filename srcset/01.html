@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srcsdetの使い方</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            max-width: 100%;
+            vertical-align: bottom;
+        }
+        h1{
+            text-align: center;
+        margin-bottom: 30px;
+        }
+        .visual{
+            max-width: 960px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+<h1>srcsdetの使い方</h1>  
+<p>801px以上の時はpc画像(960px)を表示、800px〜641pxまでタブレット用画像(800×400)
+    、640px以下になったらsp画像(640px)を表示
+</p>
+<div class="visual">
+<picture><!-- 複数枚画像やビデオを入れることが出来る -->
+<!-- <source media="(min-width:000px以上)" srcset="画像のパス 実際の画像のサイズｗ" sizes="100％の意味"> -->
+
+<source media="(min-width:801px)" srcset="img/pc-1.jpg 960w" sizes="100vw">
+<source media="(min-width:641px)" srcset="img/tb.jpg 800w" sizes="100vw">
+<img media="(max-width:640px)" srcset="img/sp-1.jpg 640w"sa sizes="100vw" alt=""><!-- imgはひとつだけ必須 -->
+    
+
+</picture>
+</div>
+
+
+
+</body>
+</html>
